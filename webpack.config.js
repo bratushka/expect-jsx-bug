@@ -2,16 +2,13 @@ const path = require('path');
 
 
 module.exports = {
-  debug: true,
   entry: [
     path.resolve(__dirname, 'src', 'index.js')
   ],
   target: 'node',
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json'],
-    modulesDirectories: ['src', 'node_modules']
+    extensions: ['.js', '.jsx', '.json'],
   },
-  noInfo: true,
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
@@ -19,7 +16,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel']},
+      {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader']},
       {test: /\.json$/, loader: "json"}
     ]
   },
