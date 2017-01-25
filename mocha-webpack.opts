@@ -1,0 +1,6 @@
+--colors
+--reporter spec
+--require setupTests.js
+--webpack-config webpack.config.js
+src/**/*.spec.js
+
